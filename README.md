@@ -55,6 +55,23 @@ The goal is simple: give your musical ideas room to grow, without making you dep
 - **Project data** - Save and export projects using the app's JSON project format.
 - **Offline-first approach** - Core music-making workflows are designed to run locally, without requiring an account or cloud service.
 
+## 📸 App screenshots
+
+Explore the ZYNTRA studio interface and music-making workflow.
+
+<p align="center">
+  <img src="docs/screenshots/ss1.jpg" width="24%" alt="ZYNTRA screenshot 1" />
+  <img src="docs/screenshots/ss2.jpg" width="24%" alt="ZYNTRA screenshot 2" />
+  <img src="docs/screenshots/ss3.jpg" width="24%" alt="ZYNTRA screenshot 3" />
+  <img src="docs/screenshots/ss4.jpg" width="24%" alt="ZYNTRA screenshot 4" />
+</p>
+<p align="center">
+  <img src="docs/screenshots/ss5.jpg" width="24%" alt="ZYNTRA screenshot 5" />
+  <img src="docs/screenshots/ss6.jpg" width="24%" alt="ZYNTRA screenshot 6" />
+  <img src="docs/screenshots/ss7.jpg" width="24%" alt="ZYNTRA screenshot 7" />
+  <img src="docs/screenshots/ss8.jpg" width="24%" alt="ZYNTRA screenshot 8" />
+</p>
+
 ## 🧱 Technology
 
 | Component | Technology |
