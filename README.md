@@ -33,6 +33,7 @@
 
 - Android Studio with a compatible Android SDK
 - JDK 17 or newer
+- Gradle compatible with the project's Android Gradle Plugin
 - Android NDK `28.2.13676358`
 - CMake `4.1.2`
 - Android SDK Platform 36
@@ -41,22 +42,20 @@ Open the repository in Android Studio and allow Gradle sync to complete. Make su
 
 ### Build from the command line
 
-Run these commands from the repository root:
+The repository currently contains Gradle wrapper properties but does not include the `gradlew` launcher scripts or wrapper JAR. Until the wrapper is added, use an installed compatible Gradle version from the repository root:
 
 ```bash
 # Build the debug APK
-./gradlew :app:assembleDebug
+gradle :app:assembleDebug
 
 # Run local unit tests
-./gradlew :app:testDebugUnitTest
+gradle :app:testDebugUnitTest
 
 # Build a release APK (requires a release keystore)
-KEYSTORE_PATH=/absolute/path/to/upload-key.jks STORE_PASSWORD='your-store-password' KEY_PASSWORD='your-key-password' ./gradlew :app:assembleRelease
+KEYSTORE_PATH=/absolute/path/to/upload-key.jks STORE_PASSWORD='your-store-password' KEY_PASSWORD='your-key-password' gradle :app:assembleRelease
 ```
 
 The debug APK is normally written to `app/build/outputs/apk/debug/`.
-
-If the Gradle wrapper is not executable, run `chmod +x gradlew` once.
 
 ## Release signing
 
