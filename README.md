@@ -16,17 +16,6 @@
 
 ---
 
-## ⬇️ Download
-
-The latest Android APK will be published on the [**GitHub Releases**](https://github.com/Barath702/Zyntra/releases/latest) page.
-
-- Download the `ZYNTRA.apk` asset from the latest release.
-- Open the APK on your Android device.
-- If prompted, allow installation from your browser or file manager.
-- Install ZYNTRA and start making music!
-
-> **Note:** APK availability depends on a published release. Check the Releases page for the current version.
-
 ## 🌌 About ZYNTRA
 
 ZYNTRA is an Android digital audio workstation built for making music on the move. It brings together a Jetpack Compose studio interface and a native **C++17 audio engine powered by Oboe**, with tools for sequencing, sound design, MIDI performance and exporting your work.
@@ -34,6 +23,23 @@ ZYNTRA is an Android digital audio workstation built for making music on the mov
 The goal is simple: give your musical ideas room to grow, without making you depend on a cloud account or an always-online workflow.
 
 > 🚧 **Development status:** ZYNTRA is actively being developed. The feature list reflects the current project source, but a stable release and compatibility across devices have not yet been independently verified.
+
+## 📸 App screenshots
+
+Explore the ZYNTRA studio interface and music-making workflow.
+
+<p align="center">
+  <img src="docs/screenshots/ss1.jpg" width="24%" alt="ZYNTRA screenshot 1" />
+  <img src="docs/screenshots/ss2.jpg" width="24%" alt="ZYNTRA screenshot 2" />
+  <img src="docs/screenshots/ss3.jpg" width="24%" alt="ZYNTRA screenshot 3" />
+  <img src="docs/screenshots/ss4.jpg" width="24%" alt="ZYNTRA screenshot 4" />
+</p>
+<p align="center">
+  <img src="docs/screenshots/ss5.jpg" width="24%" alt="ZYNTRA screenshot 5" />
+  <img src="docs/screenshots/ss6.jpg" width="24%" alt="ZYNTRA screenshot 6" />
+  <img src="docs/screenshots/ss7.jpg" width="24%" alt="ZYNTRA screenshot 7" />
+  <img src="docs/screenshots/ss8.jpg" width="24%" alt="ZYNTRA screenshot 8" />
+</p>
 
 ## ✨ Features
 
@@ -55,23 +61,6 @@ The goal is simple: give your musical ideas room to grow, without making you dep
 - **Project data** - Save and export projects using the app's JSON project format.
 - **Offline-first approach** - Core music-making workflows are designed to run locally, without requiring an account or cloud service.
 
-## 📸 App screenshots
-
-Explore the ZYNTRA studio interface and music-making workflow.
-
-<p align="center">
-  <img src="docs/screenshots/ss1.jpg" width="24%" alt="ZYNTRA screenshot 1" />
-  <img src="docs/screenshots/ss2.jpg" width="24%" alt="ZYNTRA screenshot 2" />
-  <img src="docs/screenshots/ss3.jpg" width="24%" alt="ZYNTRA screenshot 3" />
-  <img src="docs/screenshots/ss4.jpg" width="24%" alt="ZYNTRA screenshot 4" />
-</p>
-<p align="center">
-  <img src="docs/screenshots/ss5.jpg" width="24%" alt="ZYNTRA screenshot 5" />
-  <img src="docs/screenshots/ss6.jpg" width="24%" alt="ZYNTRA screenshot 6" />
-  <img src="docs/screenshots/ss7.jpg" width="24%" alt="ZYNTRA screenshot 7" />
-  <img src="docs/screenshots/ss8.jpg" width="24%" alt="ZYNTRA screenshot 8" />
-</p>
-
 ## 🧱 Technology
 
 | Component | Technology |
@@ -83,6 +72,17 @@ Explore the ZYNTRA studio interface and music-making workflow.
 | Build system | Gradle |
 | Minimum Android version | Android 10 (SDK 29) |
 | Compile / target SDK | 36 |
+
+## ⬇️ Download
+
+The latest Android APK will be published on the [**GitHub Releases**](https://github.com/Barath702/Zyntra/releases/latest) page.
+
+- Download the `ZYNTRA.apk` asset from the latest release.
+- Open the APK on your Android device.
+- If prompted, allow installation from your browser or file manager.
+- Install ZYNTRA and start making music!
+
+> **Note:** APK availability depends on a published release. Check the Releases page for the current version.
 
 ## 🚀 Build from source
 
