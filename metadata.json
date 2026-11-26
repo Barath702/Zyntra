@@ -1,0 +1,6 @@
+{
+  "name": "ZYNTRA",
+  "description": "ZYNTRA — offline-first mobile music production studio with native C++ Oboe audio engine, Session View, Drum Rack, Subtractive Synth, Melodic Sampler, Piano Roll, DSP Effects, and WAV Export.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
