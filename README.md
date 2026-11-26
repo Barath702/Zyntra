@@ -33,7 +33,7 @@
 
 - Android Studio with a compatible Android SDK
 - JDK 17 or newer
-- Gradle compatible with the project's Android Gradle Plugin
+- Gradle `9.3.1` (the version specified in `gradle/wrapper/gradle-wrapper.properties`)
 - Android NDK `28.2.13676358`
 - CMake `4.1.2`
 - Android SDK Platform 36
