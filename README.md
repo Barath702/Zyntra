@@ -1,82 +1,141 @@
-# ZYNTRA
+# 🎹 ZYNTRA
 
-**ZYNTRA** is a mobile-first, offline-first digital audio workstation (DAW) for Android. It combines a Jetpack Compose studio interface with a native C++17 audio engine built on Oboe, with support for MIDI hardware and hands-on music creation.
+<p align="center">
+  <strong>A pocket-sized music studio. Your ideas, your sound, your workflow.</strong>
+  <br />
+  A mobile-first, offline-first digital audio workstation for Android.
+</p>
 
-> **Project status:** Active development. Features are documented from the current source tree; a stable release and device-wide compatibility have not yet been independently verified.
+<p align="center">
+  <img alt="Platform" src="https://img.shields.io/badge/Platform-Android-3DDC84?logo=android&logoColor=white" />
+  <img alt="Language" src="https://img.shields.io/badge/Kotlin-Compose-7F52FF?logo=kotlin&logoColor=white" />
+  <img alt="Audio" src="https://img.shields.io/badge/Audio-C%2B%2B%20%2B%20Oboe-00599C?logo=cplusplus&logoColor=white" />
+  <img alt="License" src="https://img.shields.io/badge/License-MIT-blue.svg" />
+  <img alt="Status" src="https://img.shields.io/badge/Status-In%20Development-orange" />
+</p>
 
-## Features
+---
 
-- **Native audio engine:** C++17 audio processing with Oboe, synthesis, sampling, and a drum rack.
-- **Session workflow:** Scene and clip-based arrangement, clip launching, transport synchronization, and MIDI capture/overdub.
-- **Piano roll:** Note drawing, selection and erasing, quantized editing, resizing, velocity, and automation workflows.
-- **Drum sequencing:** Pad-based drum programming and sample playback.
-- **Instruments and effects:** Synth and sampler instruments with insert/master effects, including EQ, dynamics, time-based effects, modulation, saturation, distortion, bitcrushing, filtering, and stereo processing.
-- **MIDI hardware:** USB/BLE MIDI integration where supported by the Android device and connected hardware.
-- **Export:** WAV audio rendering and Standard MIDI File export, plus the project's JSON interchange format.
-- **Offline-first workflow:** Core music-making features are designed to work locally without requiring an account or cloud service.
+## 🌌 About ZYNTRA
 
-## Technology
+ZYNTRA is an Android digital audio workstation built for making music on the move. It brings together a Jetpack Compose studio interface and a native **C++17 audio engine powered by Oboe**, with tools for sequencing, sound design, MIDI performance and exporting your work.
 
-| Area | Technology |
+The goal is simple: give your musical ideas room to grow, without making you depend on a cloud account or an always-online workflow.
+
+> 🚧 **Development status:** ZYNTRA is actively being developed. The feature list reflects the current project source, but a stable release and compatibility across devices have not yet been independently verified.
+
+## ✨ Features
+
+### 🎛️ Make music
+- **Session-based workflow** - Work with scenes and clips, launch clips and keep your musical ideas moving.
+- **MIDI capture and overdub** - Record and layer MIDI performances.
+- **Drum sequencing** - Program beats with a pad-based drum workflow and sample playback.
+- **Piano roll editor** - Draw, select, erase, resize and quantize notes, with velocity and automation workflows.
+
+### 🎹 Shape your sound
+- **Native audio engine** - C++17 audio processing built on Google's Oboe audio library.
+- **Instruments** - Synthesizer and sampler workflows.
+- **Effects rack** - EQ, dynamics, delay and other time-based effects, modulation, saturation, distortion, bitcrushing, filtering and stereo processing.
+- **MIDI hardware support** - USB and BLE MIDI integration where supported by the Android device and connected hardware.
+
+### 📤 Take your work with you
+- **WAV export** - Render audio to WAV.
+- **MIDI export** - Export Standard MIDI Files.
+- **Project data** - Save and export projects using the app's JSON project format.
+- **Offline-first approach** - Core music-making workflows are designed to run locally, without requiring an account or cloud service.
+
+## 🧱 Technology
+
+| Component | Technology |
 |---|---|
 | Platform | Android |
-| UI | Kotlin, Jetpack Compose |
-| Audio engine | C++17, Oboe, Android NDK |
-| Native build | CMake |
+| User interface | Kotlin, Jetpack Compose |
+| Audio engine | C++17, Oboe |
+| Native build | Android NDK, CMake |
 | Build system | Gradle |
-| Minimum Android SDK | 29 |
+| Minimum Android version | Android 10 (SDK 29) |
 | Compile / target SDK | 36 |
 
-## Getting started
+## 🚀 Build from source
 
-### Requirements
+Want to explore the code or build ZYNTRA yourself? Here's what you'll need.
+
+### Prerequisites
 
 - Android Studio with a compatible Android SDK
 - JDK 17 or newer
-- Gradle `9.3.1` (the version specified in `gradle/wrapper/gradle-wrapper.properties`)
-- Android NDK `28.2.13676358`
-- CMake `4.1.2`
+- Gradle **9.3.1**
 - Android SDK Platform 36
+- Android NDK **28.2.13676358**
+- CMake **4.1.2**
 
-Open the repository in Android Studio and allow Gradle sync to complete. Make sure the NDK and CMake versions above are installed through SDK Manager.
+Install the required SDK, NDK and CMake versions through Android Studio's SDK Manager.
 
-### Build from the command line
+### Build with Gradle
 
-The repository currently contains Gradle wrapper properties but does not include the `gradlew` launcher scripts or wrapper JAR. Until the wrapper is added, use an installed compatible Gradle version from the repository root:
+The repository currently contains the Gradle wrapper configuration, but not the wrapper launchers (`gradlew`, `gradlew.bat`) or `gradle-wrapper.jar`. Until those files are added, install Gradle 9.3.1 separately and run the following commands from the project root:
 
 ```bash
-# Build the debug APK
+# Build a debug APK
 gradle :app:assembleDebug
 
-# Run local unit tests
+# Run unit tests
 gradle :app:testDebugUnitTest
 
 # Build a release APK (requires a release keystore)
-KEYSTORE_PATH=/absolute/path/to/upload-key.jks STORE_PASSWORD='your-store-password' KEY_PASSWORD='your-key-password' gradle :app:assembleRelease
+KEYSTORE_PATH=/absolute/path/to/upload-key.jks \
+STORE_PASSWORD='your-store-password' \
+KEY_PASSWORD='your-key-password' \
+gradle :app:assembleRelease
 ```
 
-The debug APK is normally written to `app/build/outputs/apk/debug/`.
+The debug APK is normally generated at:
 
-## Release signing
+```
+app/build/outputs/apk/debug/
+```
 
-Release signing reads credentials from the environment variables `KEYSTORE_PATH`, `STORE_PASSWORD`, and `KEY_PASSWORD`. The configured key alias is `upload`. Keep the keystore and passwords private. Never commit signing files, credentials, API keys, or local environment files.
+### 🔐 Release signing
 
-## Project files and compatibility
+Release signing uses the following environment variables:
 
-ZYNTRA stores projects locally and supports project serialization/export. The current codebase retains the historical `.notecraft.json` extension for compatibility with existing project data. This legacy extension and internal class names do not change the displayed app name, which is **ZYNTRA**.
+- `KEYSTORE_PATH`
+- `STORE_PASSWORD`
+- `KEY_PASSWORD`
 
-## Contributing
+The configured key alias is `upload`. Keep your keystore and credentials private. **Never commit signing keys, passwords, API keys or local environment files.**
 
-Bug reports, reproducible crash reports, performance observations, and focused pull requests are welcome. When reporting an issue, include the Android version and device model, steps to reproduce, expected and actual behavior, and relevant logs with personal information and secrets removed.
+## 🗂️ Project compatibility
 
-Please do not include private project files, copyrighted sample packs, signing keys, or credentials in issues.
+ZYNTRA stores projects locally and supports project serialization and export. The current codebase retains the historical `.notecraft.json` extension for compatibility with existing project data. This legacy extension and internal class names do not change the displayed app name: **ZYNTRA**.
 
-## License
+## 🤝 Contributing
+
+Ideas, bug reports and focused pull requests are welcome!
+
+When reporting an issue, please include:
+
+- Android version and device model
+- Steps to reproduce the issue
+- Expected behaviour and actual behaviour
+- Relevant logs, with personal information and secrets removed
+
+Please don't attach private project files, copyrighted sample packs, signing keys or credentials to issues.
+
+## 📜 License
 
 The original source code in this repository is licensed under the [MIT License](LICENSE).
 
-The MIT license applies only to material for which the project contributors hold the necessary rights. Third-party libraries, fonts, audio samples, presets, demo projects, artwork, and other bundled assets may have separate licenses or usage terms. Their inclusion here does not relicense them. Verify and document the applicable license and attribution for each such item before redistributing the project or publishing builds.
+The MIT license applies only to material for which the project contributors hold the necessary rights. Third-party libraries, fonts, audio samples, presets, demo projects, artwork and other bundled assets may have separate licenses or usage terms. Their inclusion here does not relicense them. Verify and document the applicable license and attribution for each such item before redistributing the project or publishing builds.
 
-## Acknowledgements
+## 🙌 Acknowledgements
 
-ZYNTRA uses open-source libraries and Android platform technologies. See `gradle/libs.versions.toml` and the relevant upstream projects for their individual licenses.
+ZYNTRA is built with open-source libraries and Android platform technologies. See `gradle/libs.versions.toml` and the relevant upstream projects for their individual licenses.
+
+---
+
+<p align="center">
+  <strong>🎶 Make something worth listening to.</strong>
+  <br />
+  <sub>Built with curiosity, code and a love for music.</sub>
+</p>
