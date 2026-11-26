@@ -16,6 +16,17 @@
 
 ---
 
+## ⬇️ Download
+
+The latest Android APK will be published on the [**GitHub Releases**](https://github.com/Barath702/Zyntra/releases/latest) page.
+
+- Download the `ZYNTRA.apk` asset from the latest release.
+- Open the APK on your Android device.
+- If prompted, allow installation from your browser or file manager.
+- Install ZYNTRA and start making music!
+
+> **Note:** APK availability depends on a published release. Check the Releases page for the current version.
+
 ## 🌌 About ZYNTRA
 
 ZYNTRA is an Android digital audio workstation built for making music on the move. It brings together a Jetpack Compose studio interface and a native **C++17 audio engine powered by Oboe**, with tools for sequencing, sound design, MIDI performance and exporting your work.
